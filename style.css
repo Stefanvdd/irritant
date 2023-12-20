@@ -1,0 +1,146 @@
+*{
+    background-image: url(https://media.giphy.com/media/l0MYzLCMDpCaaZpxC/giphy.gif);
+    display: flex;
+    background-repeat:no-repeat;
+ background-size:cover;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+.grid-container {
+    display: grid;
+    gap: 1%;
+    grid-template-columns: 10vw 10vw 10vw 20vw 50vw;
+    grid-template-rows: 10vh 60vh 40vh;
+    background-color: rgb(255, 0, 204);
+}
+.grid-item {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.item1, .item3, .item4 {
+    grid-column: 1 / span 4;
+    text-align: left;
+    margin-left: 10%;
+}
+.item1{
+    grid-row: 1;
+}
+.item1 img{
+    height: 40px;
+}
+.item2{
+    grid-column: 5;
+    grid-row: 1 / span 3;
+    background-color: rgb(197,33,70);
+}
+.item2 img{
+    height: 87.5vh;
+}
+.item3{
+    grid-row: 2;
+}
+.item4 {
+    grid-row: 3;
+}
+
+.p-text {
+    font-size: 20px;
+    margin-bottom: -20px;
+}
+.p-ding {
+    font-size: 20px;
+}
+.h3-text {
+    margin-bottom: -40px;
+}
+.made-by {
+    font-size: 20px;
+    margin-top: -140px;
+    margin-left: -5px;
+}
+.item3 button img {
+    transition: transform 0.3s;
+}
+
+.item3 button:hover img{
+    transform: scale(1.1);
+}
+
+.item3 button {
+    background: none;
+    color: transparent;
+    border: none;
+    outline: none;
+}
+.made-by {
+    font-size: 20px;
+    margin-top: -160px;
+    margin-left: -0px;
+    margin-left: 80px;
+
+}
+.showPopupButton{
+    background-color: #0800ff;
+    border: none;
+    margin-bottom: 0px;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cookie-overlay {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background: #000000;
+    z-index: 2051;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 6px;
+  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  
+    div:first-child {
+      width: 458px;
+    }
+  
+    a {
+      text-decoration: underline;
+    }
+  
+    .close-cookies {
+      cursor: pointer;
+    }
+  
+    @include media-breakpoint-down(md) {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 0;
+  
+      > div:first-child {
+        width: auto;
+      }
+    }
+  }
